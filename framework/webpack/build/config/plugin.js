@@ -1,9 +1,15 @@
+const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+// 插件
 const plugins = [
   new HtmlWebpackPlugin({
-    title: "管理输出",
+    template: resolve(__dirname, "../../public/index.html"),
+    minify: {
+      collapseWhitespace: true,
+      removeComments: true,
+    },
   }),
   new MiniCssExtractPlugin({
     filename: "css/built.css",

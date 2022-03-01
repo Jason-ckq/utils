@@ -13,4 +13,7 @@ module.exports = {
   module: loader,
   devServer: {},
   plugins,
+  resolve: {
+    extensions: [".js", ".vue", ".json", ".css", ".less", ".tsx", ".ts"],
+  },
 };

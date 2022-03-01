@@ -13,13 +13,14 @@
         "targets": {
           "chrome": "60",
           "firefox": "60",
-          "ie": "8",
+          "ie": "9",
           "safari": "10",
           "edge": "17"
         }
       }
     ],
-    ["@babel/preset-react"]
+    ["@babel/preset-react"],
+    ["@babel/preset-typescript"]
   ],
   "plugins": [
     "@babel/plugin-proposal-optional-chaining",

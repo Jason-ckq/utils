@@ -1,17 +1,12 @@
-import "./css.css";
-// import "@babel/polyfill";
+// 入口
+export const ENTRY = "vue";
+import { ENTRY } from "./configure";
 
-const promiseArr = [new Promise(() => {}), new Promise(() => {})];
-
-promiseArr.map(propmise => console.log(propmise));
-
-const add = (x, y) => x + y;
-console.log(add(1, 2));
-
-const item = {
-  name: "lee",
+const bootstrap = () => {
+  ENTRY === "vue"
+    ? import(/* webpackChunkName: "vue" */ "./vue")
+    : import(/* webpackChunkName: "react" */ "./react");
 };
 
-const temp = [1, 2, 3, 4];
-console.log(temp.includes(1));
-console.log(item?.name);
+// 启动
+bootstrap();
