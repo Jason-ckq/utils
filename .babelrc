@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      // 根据浏览器环境，转换
+      "@babel/preset-env",
+      {
+        // 按需转换使用到的高级语法
+        "useBuiltIns": "usage",
+        "corejs": {
+          "version": 3
+        },
+        // 指定兼容性做到哪个版本浏览器
+        "targets": {
+          "chrome": "60",
+          "firefox": "60",
+          "ie": "8",
+          "safari": "10",
+          "edge": "17"
+        }
+      }
+    ],
+    ["@babel/preset-react"]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-modules-commonjs"
+  ]
+}

@@ -1,0 +1,8 @@
+:root {
+  --color: red;
+}
+
+.item {
+  transform: translateX(20px);
+  color: var(--color);
+}
