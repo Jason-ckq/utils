@@ -1,6 +1,6 @@
 const { resolve } = require("path");
+const { loader } = require("./config/loader");
 const { plugins } = require("./config/plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src",
@@ -10,28 +10,7 @@ module.exports = {
     publicPath: "/",
     clean: true,
   },
+  module: loader,
   devServer: {},
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "../",
-            },
-          },
-          "css-loader",
-          "postcss-loader",
-        ],
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"],
-      },
-    ],
-  },
   plugins,
 };
