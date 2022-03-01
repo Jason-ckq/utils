@@ -1,0 +1,99 @@
+.wrap {
+  height: 100%;
+  width: 100%;
+  background: url("./assets/background.png") no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+  }
+  .plugin {
+    position: absolute;
+    box-shadow: 0px 0.5px 1px #bab8b8;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 3px;
+  }
+
+  .container {
+    position: absolute;
+    height: 26%;
+    min-height: 240px;
+    width: 360px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 35%);
+    border-radius: 2px;
+    header {
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      color: #27a9da;
+    }
+    > div {
+      height: 30px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: 1px solid #e7e7e7;
+      padding: 4px 0px;
+      img {
+        width: 24px;
+      }
+      input {
+        flex: 1;
+        outline: none;
+        background: none;
+        border: none;
+        padding: 0rem 0.4rem;
+        color: #333;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+    button {
+      margin-top: 8px;
+      padding: 4px;
+      border: 1px solid #27a9da;
+      cursor: pointer;
+      background-color: #27a9da;
+      font-weight: 400;
+      color: #ffffff;
+      border-color: #27a9da;
+      text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+      box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+      letter-spacing: 2px;
+      &:hover {
+        background-color: #096ace;
+        border-color: #096ace;
+      }
+    }
+  }
+}
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc;
+}
