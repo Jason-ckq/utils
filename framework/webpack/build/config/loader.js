@@ -42,8 +42,8 @@ const loader = {
     },
     {
       test: /\.(ts|tsx)$/,
-      exclude: /node_modules/,
       use: ["ts-loader"],
+      exclude: /node_modules/,
     },
     {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -64,4 +64,8 @@ const loader = {
   ],
 };
 
-module.exports = { loader };
+const resolve = {
+  extensions: [".js", ".vue", ".json", ".css", ".less", ".tsx", ".ts"],
+};
+
+module.exports = { loader, resolve };

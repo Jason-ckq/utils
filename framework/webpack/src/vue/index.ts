@@ -1,3 +1,6 @@
-const num: number = 1;
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./theme/index.css";
 
-console.log(num);
+const app = createApp(App);
+app.mount("#root");

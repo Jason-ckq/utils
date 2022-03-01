@@ -1,6 +1,4 @@
-// 入口
 export const ENTRY = "vue";
-import { ENTRY } from "./configure";
 
 const bootstrap = () => {
   ENTRY === "vue"
