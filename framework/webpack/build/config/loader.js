@@ -19,7 +19,20 @@ const commonCssLoader = [
   "postcss-loader",
 ];
 
-// loader
+const tplLoader = {
+  test: /\.tpl$/,
+  use: [
+    "babel-loader",
+    {
+      loader: "tpl-loader",
+      options: {
+        log: true,
+      },
+    },
+  ],
+};
+
+// 插件loader
 const loader = {
   rules: [
     {
@@ -61,11 +74,12 @@ const loader = {
       test: /\.xml$/i,
       use: ["xml-loader"],
     },
+    tplLoader,
   ],
 };
 
 const resolve = {
-  extensions: [".js", ".vue", ".json", ".css", ".less", ".tsx", ".ts"],
+  extensions: [".js", ".vue", ".ts", ".json", ".css", ".less", ".tsx"],
 };
 
 module.exports = { loader, resolve };
