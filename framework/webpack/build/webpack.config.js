@@ -7,7 +7,6 @@ const entry = "./src";
 const output = {
   filename: `./js/[name].js`,
   path: path.resolve(__dirname, "../dist"),
-  publicPath: "/",
   clean: true,
 };
 
@@ -17,7 +16,8 @@ module.exports = {
   module: loader,
   plugins,
   resolve,
+  devtool: process.env.NODE_ENV === "production" ? false : "inline-source-map",
   resolveLoader: {
-    modules: ["node_modules", path.resolve(__dirname, "loader")],
+    modules: ["./node_modules", path.resolve(__dirname, "loader")],
   },
 };

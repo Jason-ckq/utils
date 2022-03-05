@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack server --mode development --config ./build/webpack.config.js",
-    "watch": "webpack watch --mode production --config ./build/webpack.config.js",
-    "build": "webpack --mode production --config ./build/webpack.config.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server  --config ./build/webpack.config.js",
+    "build": "cross-env NODE_ENV=production  webpack  --config ./build/webpack.config.js"
   },
   "author": "lee zhi",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.7",
     "@babel/plugin-proposal-optional-chaining": "^7.16.7",
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "@babel/polyfill": "^7.12.1",
@@ -24,6 +24,7 @@
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "core-js": "^3.21.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "csv-loader": "^3.0.3",
     "esbuild-loader": "^2.18.0",
@@ -37,7 +38,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "style-loader": "^3.3.1",
-    "ts-loader": "^9.2.6",
+    "ts-loader": "^9.1.0",
     "typescript": "^4.6.2",
     "vue": "^3.2.31",
     "vue-loader": "^17.0.0",

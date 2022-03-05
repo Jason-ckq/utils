@@ -13,7 +13,7 @@ const plugins = [
     },
   }),
   new MiniCssExtractPlugin({
-    filename: "css/built.css",
+    filename: "./css/built.css",
   }),
   new VueLoaderPlugin(),
 ];

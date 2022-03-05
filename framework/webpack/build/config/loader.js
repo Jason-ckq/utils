@@ -54,9 +54,8 @@ const loader = {
       use: ["vue-loader"],
     },
     {
-      test: /\.(ts|tsx)$/,
+      test: /\.(ts|tsx)$/, // .ts、.tsx
       use: ["ts-loader"],
-      exclude: /node_modules/,
     },
     {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
